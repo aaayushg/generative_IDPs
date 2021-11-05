@@ -10,6 +10,7 @@ RMSD/ : Modified Bosco Ho C script for many-to-many RMSD and other python script
 
 t-SNE/ : Scripts for t-SNE space to generate embedded space used in Figure 1 with example data.
 
+Histogram/ : Script to generate histogram plots used in Figure 3.
 
 
 
