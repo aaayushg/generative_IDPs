@@ -242,6 +242,7 @@ autoencoder.fit(x_train, x_train,
 
 
 #build multilayer decoder
+decoder = Sequential()
 decoder.add(Dense(50, input_shape=(encoding_dim,), activation='relu', weights=autoencoder.layers[-3].get_weights()))
 decoder.add(Dense(300, activation='relu', weights=autoencoder.layers[-2].get_weights()))
 decoder.add(Dense(x_train.shape[1], activation='sigmoid', weights=autoencoder.layers[-1].get_weights()))
