@@ -1,6 +1,6 @@
 # Artificial Intelligence Guided Conformational Sampling of Intrinsically Disordered Proteins
 
-Implementation_codes/
+**Implementation_codes/**
         
          -autoencoder_train_generate.py: Script to train the autoencoder with the MD trajectory (PDB format) as an input. 
                   (Sample input files can be provided on request)
@@ -14,11 +14,11 @@ Code runs smoothly with the following versions:
 - python3.8 -m pip install keras==2.4.3
 - Works fine with CUDA 11.0 which nees to be defined in the LD_LIBRARY_PATH 
 
-Plot_histogram/ : Script to generate histogram plots used in Figure 3.
+**Plot_histogram/** : Script to generate histogram plots used in Figure 3.
 
-RMSD/ : Modified Bosco Ho C script for many-to-many RMSD and other python scripts for comparing many-to-many and one-to-many RMSDs.
+**RMSD/** : Modified Bosco Ho C script for many-to-many RMSD and other python scripts for comparing many-to-many and one-to-many RMSDs.
 
-t-SNE/ : Scripts for t-SNE space to generate embedded space used in Figure 1 with example data.
+**t-SNE/** : Scripts for t-SNE space to generate embedded space used in Figure 1 with example data.
 
 
 
