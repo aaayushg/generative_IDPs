@@ -20,14 +20,13 @@ do
 			echo "test..."
 
 			#define filename
-                        fout="test_"$i"_"$dim"_"$btc"_"$n"_"$r
+                        fout="test_"$i"_"$dim"_"$btc"_"$r
 
                         # prepare input script
-			echo "net $n" > input
 			echo "dimensions $dim" >> input
 			echo "batch_size $btc" >> input
 			echo "out_label polyq" >> input
-			echo "trajectory /home/aayush/Documents/Degiacomi/input_data/polyq/all.pdb" >> input
+			echo "trajectory ./input_data/polyq/all.pdb" >> input
 			echo "test_size 75000" >> input
 			echo "epochs 100" >> input
 			echo "out_folder test/$fout" >> input
@@ -36,7 +35,7 @@ do
 
 			echo $fout
 			
-                        ./space_sampler.py input > log
+                        ./autoencoder_train_generate.py input > log
                         mv log test/$fout
 
 		done
