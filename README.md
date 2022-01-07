@@ -8,6 +8,11 @@ Implementation_codes/
 
          -generate_new_IDPs.py: Script for sampling new vectors and decoding full conformation using trained weights of the autoencoder.
 
+Code runs smoothly with the following versions:
+Python3.6
+Tensorflow==2.4.1
+Keras==2.4.3
+
 Plot_histogram/ : Script to generate histogram plots used in Figure 3.
 
 RMSD/ : Modified Bosco Ho C script for many-to-many RMSD and other python scripts for comparing many-to-many and one-to-many RMSDs.
