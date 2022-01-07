@@ -2,7 +2,7 @@
 
 Implementation_codes/
         
-         -autoencoder_train_generate.py: Script to train the autoencoder with the MD trajectory (PDB format) as an input.
+         -autoencoder_train_generate.py: Script to train the autoencoder with the MD trajectory (PDB format) as an input. Input files can be provided on request.
 
          -run_python.sh: Running the autoencoder_train_generate.py script with customized entries i.e., epochs, batchsize, input file etc.
 
