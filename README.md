@@ -9,9 +9,9 @@ Implementation_codes/
          -generate_new_IDPs.py: Script for sampling new vectors and decoding full conformation using trained weights of the autoencoder.
 
 Code runs smoothly with the following versions:
-Python3.6
-Tensorflow==2.4.1
-Keras==2.4.3
+python3.6
+python3.6 -m pip install tensorflow-gpu==2.4.1
+python3.6 -m pip install keras==2.4.3
 
 Plot_histogram/ : Script to generate histogram plots used in Figure 3.
 
