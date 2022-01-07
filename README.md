@@ -10,7 +10,6 @@ Implementation_codes/
          -generate_new_IDPs.py: Script for sampling new vectors and decoding full conformation using trained weights of the autoencoder.
 
 Code runs smoothly with the following versions:
-- python 3.6 or 3.8
 - python3.8 -m pip install tensorflow-gpu==2.4.1
 - python3.8 -m pip install keras==2.4.3
 - Works fine with CUDA 11.0 which nees to be defined in the LD_LIBRARY_PATH 
