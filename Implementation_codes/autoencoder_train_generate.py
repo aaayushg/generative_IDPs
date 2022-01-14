@@ -10,15 +10,17 @@ import scipy.spatial.distance as S
 import numpy as np
 
 import tensorflow as tf
-from tensorflow.keras.layers import Input, Dense, Dropout
-from tensorflow.keras.models import Model, Sequential, load_model
+from keras.layers import Input, Dense, Dropout
+from keras.models import Model, Sequential, load_model
 
 import biobox as bb
 import random as rn
 
 np.random.seed(123)
 rn.seed(123)
-tf.random.set_seed(1)
+os.environ['PYTHONHASHSEED']='0'
+tensorflow.random.set_seed(1)
+os.environ['TF_DETERMINISTIC_OPS']='1'
 
 ### Parser reading input parameters ###
 class Parser:
