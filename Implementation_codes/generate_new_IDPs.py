@@ -5,7 +5,7 @@ import numpy as np
 from copy import deepcopy
 from keras.models import Model, Sequential, load_model
 
-fname = 'chiz/run1/run1_trunc.pdb'
+fname = '/input_data/polyq/all.pdb'
 
 M = bb.Molecule()
 M.import_pdb(fname)
@@ -17,10 +17,10 @@ idx = M.atomselect("*", "*", ["CA", "CB", "C", "N", "CG" , "CD", "NE2", "CH3", "
 crds = M.coordinates[:, idx]
 
 #randomly separate simulation in training and test set
-indicestrain = np.arange(0,43500,1)
+indicestrain = np.arange(0,19000,1)
 
 # save structures of test set for later comparison
-indicestest = np.arange(43500,145000,1)
+indicestest = np.arange(19000,95000,1)
 test_structs = M.get_subset(idxs=idx, conformations=indicestest)
 train_structs = M.get_subset(idxs=idx, conformations=indicestrain)
 
