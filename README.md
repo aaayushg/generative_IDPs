@@ -18,8 +18,6 @@ Code runs smoothly with the following versions:
 
 **RMSD/** : Modified Bosco Ho C script for many-to-many RMSD and other python scripts for comparing many-to-many and one-to-many RMSDs.
 
-**t-SNE/** : Scripts for t-SNE space to generate embedded space used in Figure 1 with example data.
-
 
 
 
