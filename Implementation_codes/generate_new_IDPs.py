@@ -67,7 +67,7 @@ def cov_prots_gen1(n):
 #cov_prots=cov_prots_gen2(43500)
 
 #or just sample randomly
-cov_prots = np.random.multivariate_normal(mean_a,cov,size=101500)
+cov_prots = np.random.multivariate_normal(mean_a,cov,size=76000)
 
 np.savetxt("cov_positive_set_101500.dat", cov_prots)
 decoded_cov_prots = decoder.predict(cov_prots)
