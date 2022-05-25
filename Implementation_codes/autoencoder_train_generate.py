@@ -176,10 +176,10 @@ print("> selected %s atoms"%len(idx))
 #randomly separate simulation in training and test set
 print("> extracting %s random items for test set"% test_size)
 #indices = np.random.permutation(len(crds))
-indicestrain = np.arange(0,20000,1)
+indicestrain = np.arange(0,19000,1)
 
 # save structures of test set for later comparison
-indicestest = np.arange(20000,95000,1)
+indicestest = np.arange(19000,95000,1)
 test_structs = M.get_subset(idxs=idx, conformations=indicestest)
 test_structs.write_pdb("%s/%s_test_set.pdb"%(outfolder, outlabel))
 train_structs = M.get_subset(idxs=idx, conformations=indicestrain) 
