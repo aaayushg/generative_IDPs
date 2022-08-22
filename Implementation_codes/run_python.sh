@@ -26,7 +26,7 @@ do
 			echo "dimensions $dim" >> input
 			echo "batch_size $btc" >> input
 			echo "out_label polyq" >> input
-			echo "trajectory ./input_data/polyq/all.pdb" >> input
+			echo "trajectory ./polyq_1000frames.pdb" >> input
 			echo "test_size 75000" >> input
 			echo "epochs 100" >> input
 			echo "out_folder test/$fout" >> input
