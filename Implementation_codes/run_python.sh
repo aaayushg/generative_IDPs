@@ -12,7 +12,7 @@ do
 
 	for btc in "${batchsize[@]}"
 	do
-	
+
 		for r in "${reps[@]}"
 		do
 
@@ -27,20 +27,20 @@ do
 			echo "batch_size $btc" >> input
 			echo "out_label polyq" >> input
 			echo "trajectory ./polyq_1000frames.pdb" >> input
-			echo "test_size 75000" >> input
+			echo "test_size 200" >> input
 			echo "epochs 100" >> input
 			echo "out_folder test/$fout" >> input
 			echo "decoder_file test/$fout/decoder.h5" >> input
 			echo "encoder_file test/$fout/encoder.h5" >> input
 
 			echo $fout
-			
-                        ./autoencoder_train_generate.py input > log
-                        mv log test/$fout
+
+                        python ./autoencoder_train_generate.py input > log
+                        mv -f log test/$fout 2>/dev/null
 
 		done
 	done
 done
 
-rm log
-rm input
+rm -f log
+rm -f input

@@ -19,12 +19,12 @@ import random as rn
 np.random.seed(123)
 rn.seed(123)
 os.environ['PYTHONHASHSEED']='0'
-tensorflow.random.set_seed(1)
+tf.random.set_seed(1)
 os.environ['TF_DETERMINISTIC_OPS']='1'
 
 ### Parser reading input parameters ###
 class Parser:
-    
+
     parameters={}
 
     def __init__(self):
@@ -35,9 +35,9 @@ class Parser:
         self.add('trajectory','fname','str', "")
         self.add('target_struct','fname2', 'str', "")
 
-        self.add('test_size','test_size','int', 100) 
+        self.add('test_size','test_size','int', 100)
         self.add('epochs','epochs','int', 1000)
-        self.add('batch_size','batch_size','int', 200) 
+        self.add('batch_size','batch_size','int', 200)
         self.add('out_folder','outfolder','str', "result")
         self.add('optimizer','optimizer','str', "adam")
 
@@ -122,7 +122,7 @@ outlabel = params.outlabel #"1E6J" # label for output files
 
 # input data
 fname = params.fname
-fname2 = params.fname2 
+fname2 = params.fname2
 
 # training parameters
 test_size = params.test_size #100 # number of items in test set
@@ -140,7 +140,7 @@ encoderfile = params.encoderfile #"%s/encoder_%s_neurons.h5"%(outfolder, encodin
 
 #make output directory, if unexistent, and copy there a backup of input file
 if not os.path.isdir(outfolder):
-    os.mkdir(outfolder)
+    os.makedirs(outfolder)
 
 shutil.copy(infile, outfolder)
 
@@ -182,7 +182,7 @@ indicestrain = np.arange(0,19000,1)
 indicestest = np.arange(19000,95000,1)
 test_structs = M.get_subset(idxs=idx, conformations=indicestest)
 test_structs.write_pdb("%s/%s_test_set.pdb"%(outfolder, outlabel))
-train_structs = M.get_subset(idxs=idx, conformations=indicestrain) 
+train_structs = M.get_subset(idxs=idx, conformations=indicestrain)
 #train_structs.write_pdb("%s/%s_train_set.pdb"%(outfolder, outlabel))
 
 ###################################
