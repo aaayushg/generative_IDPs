@@ -1,0 +1,2 @@
+DEFAULT_RANDOM_SEED = 123
+DEFAULT_ATOM_NAMES = ["CA", "CB", "C", "N", "CG", "CD", "NE2", "CH3", "O", "OE1"]

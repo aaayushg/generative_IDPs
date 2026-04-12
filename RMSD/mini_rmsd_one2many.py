@@ -1,17 +1,17 @@
-with open("test_dil_1015_pos.dat2",'r') as file:
-	mini=[]
-	for i in range(1015):
-		print(i)
-		store=[]
-		for l in file:
-			first=l.split()
-			if int(first[0])==i:
-				store.append(float(first[2]))
-			else:
-				break
-		mini.append(min(store))
-#		print(mini)
-print(mini)
-print(len(mini))
-sum=sum(float(sub) for sub in mini)
-print(sum/len(mini))	
+#!/usr/bin/env python3
+
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from generative_idps.cli import main
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(["extract-min-rmsd", *sys.argv[1:]]))

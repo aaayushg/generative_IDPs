@@ -1,0 +1,10 @@
+dimensions 4
+batch_size 16
+out_label legacy_polyq
+trajectory ./Implementation_codes/polyq_1000frames.pdb
+test_size 20
+epochs 2
+out_folder ./outputs/legacy_polyq
+optimizer adam
+decoder_file ./outputs/legacy_polyq/decoder.keras
+encoder_file ./outputs/legacy_polyq/encoder.keras

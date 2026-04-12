@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "generative-idps"
+version = "0.1.0"
+description = "Utilities for training and analyzing generative models for intrinsically disordered proteins"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "Aayush" }
+]
+dependencies = [
+  "joblib>=1.3",
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "pandas>=2.1",
+  "scikit-learn>=1.3",
+  "scipy>=1.11",
+  "tensorflow>=2.16,<2.19; platform_system != 'Darwin'",
+  "tensorflow-macos>=2.16,<2.19; platform_system == 'Darwin'",
+  "urllib3<2; platform_system == 'Darwin'"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0"
+]
+
+[project.scripts]
+generative-idps = "generative_idps.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
